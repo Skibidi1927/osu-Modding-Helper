@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        :root {
+            --osu-b2: hsl(200, 10%, 30%);
+            --osu-b4: hsl(200, 10%, 20%);
+            --osu-b5: hsl(200, 10%, 15%);
+            --osu-blue: hsl(200, 100%, 50%);
+            --osu-text: #fff;
+            --osu-muted: hsl(200, 10%, 70%);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            width: 320px;
+            margin: 0;
+            padding: 16px;
+            background: var(--osu-b5);
+            color: var(--osu-text);
+            font-family: Torus, "Helvetica Neue", Tahoma, Arial, sans-serif;
+        }
+
+        .settings-panel {
+            padding: 16px;
+            border-radius: 5px;
+            background: var(--osu-b4);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+        }
+
+        .settings-eyebrow {
+            margin-bottom: 6px;
+            color: var(--osu-blue);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            margin: 0 0 16px;
+            color: var(--osu-text);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--osu-muted);
+            font-size: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px 10px;
+            border: 1px solid hsl(200, 10%, 40%);
+            border-radius: 3px;
+            outline: none;
+            background: var(--osu-b5);
+            color: var(--osu-text);
+            font: inherit;
+            font-size: 13px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+
+        input:focus {
+            border-color: var(--osu-blue);
+            box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.18);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 14px;
+            padding: 9px 12px;
+            border: 0;
+            border-radius: 3px;
+            background: var(--osu-blue);
+            color: #fff;
+            font: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: filter 0.15s, transform 0.15s;
+        }
+
+        button:hover { filter: brightness(1.12); }
+        button:active { transform: translateY(1px); }
+    </style>
+</head>
+<body>
+    <main class="settings-panel">
+        <div class="settings-eyebrow">Modding helper</div>
+        <h3>Upload settings</h3>
+        <label for="sul-key">s-ul.eu API key</label>
+        <input type="password" id="sul-key" placeholder="Paste your key here..." autocomplete="off">
+        <button type="button" id="save-btn">Save key</button>
+    </main>
+
+    <!-- loads the logic script -->
+    <script src="popup.js"></script>
+</body>
+</html>

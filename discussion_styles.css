@@ -1,0 +1,351 @@
+/* native osu! hover color for the markdown buttons */
+.custom-modding-toolbar button:hover {
+    color: hsl(var(--hsl-p)) !important;
+}
+
+.custom-modding-toolbar button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.markdown-paste-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 4px;
+    color: #bbb;
+    cursor: pointer;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.markdown-paste-toggle input {
+    accent-color: hsl(var(--hsl-p));
+    cursor: pointer;
+}
+
+.markdown-field-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 10px;
+    border: 1px solid hsl(var(--hsl-b3));
+    border-radius: 4px;
+    background: hsl(var(--hsl-b4));
+    color: #fff;
+    font-size: 12px;
+}
+
+.markdown-field-form__header,
+.markdown-field-form__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.markdown-field-form__header {
+    justify-content: space-between;
+}
+
+.markdown-field-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.markdown-field-form input {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid hsl(var(--hsl-b2));
+    border-radius: 3px;
+    background: hsl(var(--hsl-b5));
+    color: #fff;
+}
+
+.markdown-field-form__close,
+.markdown-field-form__cancel,
+.markdown-field-form__insert {
+    border: 0;
+    cursor: pointer;
+}
+
+.markdown-field-form__close {
+    margin-left: auto;
+    background: transparent;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.markdown-field-form__actions {
+    justify-content: flex-end;
+}
+
+.markdown-field-form__cancel,
+.markdown-field-form__insert {
+    color: #fff;
+}
+
+.custom-tags-code {
+    display: inline-block;
+    max-width: 100%;
+    padding: 3px 6px;
+    overflow-wrap: anywhere;
+    border-radius: 3px;
+    background: hsl(var(--hsl-b5));
+    color: hsl(var(--hsl-c2));
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.custom-metadata-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    font-size: 13px;
+}
+
+.custom-metadata-line strong {
+    flex: 0 0 auto;
+    color: #fff;
+}
+
+.custom-metadata-line .custom-tags-code {
+    min-width: 0;
+}
+
+.custom-metadata-separator {
+    color: #ccc;
+}
+
+.custom-copy-button--source {
+    flex: 0 0 auto;
+    width: 86px;
+    min-width: 86px;
+    margin-left: auto;
+}
+
+.custom-discussion-stats {
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid hsl(var(--hsl-b3));
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+.custom-discussion-stats .beatmap-stats-table {
+    width: 100%;
+}
+
+/* spaces the download button from the beatmap page button */
+.custom-download-btn {
+    margin-top: 5px; 
+}
+
+/* mobile styling adjustment for download button */
+@media (min-width: 900px) {
+    .custom-download-btn {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+}
+
+.mod-helper-config-button {
+    margin-left: auto;
+}
+
+.mod-helper-settings-popover {
+    position: absolute;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 220px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid hsl(var(--hsl-b3));
+    border-radius: 4px;
+    background: hsl(var(--hsl-b4));
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    color: #fff;
+    font-size: 12px;
+}
+
+.mod-helper-settings-popover__title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid hsl(var(--hsl-b3));
+    color: #fff;
+    font-weight: 600;
+}
+
+.mod-helper-setting {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.mod-helper-setting input {
+    accent-color: hsl(var(--hsl-p));
+}
+
+.mod-helper-settings-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.mod-helper-settings-window {
+    display: flex;
+    flex-direction: column;
+    width: min(760px, 90vw);
+    max-height: 88vh;
+    overflow: hidden;
+    background: hsl(var(--hsl-b4));
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.mod-helper-settings-header,
+.mod-helper-settings-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    background: hsl(var(--hsl-b2));
+}
+
+.mod-helper-settings-header h2 {
+    margin: 3px 0 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.mod-helper-settings-eyebrow {
+    color: hsl(var(--hsl-p));
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.mod-helper-settings-close {
+    width: auto;
+    margin: 0;
+    padding: 4px 8px;
+    background: transparent;
+    color: #bbb;
+    font-size: 20px;
+}
+
+.mod-helper-settings-body {
+    overflow: auto;
+    padding: 22px;
+}
+
+.mod-helper-settings-section {
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid hsl(var(--hsl-b3));
+}
+
+.mod-helper-settings-section:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.mod-helper-settings-section h3 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.mod-helper-settings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 20px;
+}
+
+.mod-helper-settings-grid--two {
+    margin-top: 12px;
+}
+
+.mod-helper-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #bbb;
+    font-size: 12px;
+}
+
+.mod-helper-field input,
+.mod-helper-field select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid hsl(var(--hsl-b2));
+    border-radius: 3px;
+    background: hsl(var(--hsl-b5));
+    color: #fff;
+    font: inherit;
+}
+
+.mod-helper-settings-footer {
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.mod-helper-settings-footer .btn-osu-big {
+    width: auto;
+    margin: 0;
+}
+
+.mod-helper-settings-status {
+    color: #bde6a4;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .mod-helper-settings-modal { padding: 12px; }
+    .mod-helper-settings-window { width: 96vw; max-height: 94vh; }
+    .mod-helper-settings-grid { grid-template-columns: 1fr; }
+}
+
+.mod-helper-real-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.mod-helper-real-modal__box {
+    width: min(420px, 90vw);
+    padding: 24px;
+    border-radius: 5px;
+    background: hsl(var(--hsl-b2));
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+
+.mod-helper-real-modal__box strong {
+    font-size: 20px;
+}
+
+.mod-helper-real-modal__box p {
+    color: #ccc;
+    font-size: 13px;
+}
